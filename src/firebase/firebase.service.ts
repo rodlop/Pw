@@ -27,7 +27,7 @@ export class FirebaseService {
       admin.initializeApp({ credential: admin.credential.cert(creds) });
     } else {
       // Initialize with default application credentials if available
-      admin.initializeApp();
+      admin.initializeApp({ projectId: 'pwtrabalhofinal' });
     }
 
     this.db = admin.firestore();
